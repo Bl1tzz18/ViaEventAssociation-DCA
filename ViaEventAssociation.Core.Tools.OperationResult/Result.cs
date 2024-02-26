@@ -5,13 +5,13 @@ namespace ViaEventAssociation.Core.Tools.OperationResult
     public class Result
     {
         private bool _isFailure = false;
-        private List<ExceptionModel> _errorMessages = new();
+        private List<ExceptionModel> ErrorMessage = new();
         public bool IsSuccess => !_isFailure;
         
         public static Result Success() => new();
-        public static Result Failure(List<ExceptionModel> errorMessages) => new() { _isFailure = true, _errorMessages = errorMessages };
+        public static Result Failure(List<ExceptionModel> errorMessages) => new() { _isFailure = true, ErrorMessage = errorMessages };
         
-        public IEnumerable<ExceptionModel> Errors => _errorMessages;
+        public IEnumerable<ExceptionModel> Errors => ErrorMessage;
     }
     
     public class Result<T>
