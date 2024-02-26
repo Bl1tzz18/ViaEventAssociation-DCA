@@ -4,6 +4,14 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Documentation", "Documentat
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Docs", "Documentation\Docs\Docs.csproj", "{2336DA2C-97B2-4165-9BAD-2C612DBBBB19}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{7BD68B20-B6C7-4CD1-A567-1C890450E237}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Core", "Core", "{187FC978-AFF7-4B11-A962-1059B2717107}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Tools", "Tools", "{A357F1E9-AECC-4DB7-B7EE-06B3E940072F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ViaEventAssociation.Core.Tools.OperationResult", "ViaEventAssociation.Core.Tools.OperationResult\ViaEventAssociation.Core.Tools.OperationResult.csproj", "{0393F3C3-801D-402C-9E29-F67A8D9EA8FD}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -11,11 +19,18 @@ Global
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
 		{2336DA2C-97B2-4165-9BAD-2C612DBBBB19} = {968A7CCD-4709-41A6-A2C5-A61146118E3B}
+		{187FC978-AFF7-4B11-A962-1059B2717107} = {7BD68B20-B6C7-4CD1-A567-1C890450E237}
+		{A357F1E9-AECC-4DB7-B7EE-06B3E940072F} = {187FC978-AFF7-4B11-A962-1059B2717107}
+		{0393F3C3-801D-402C-9E29-F67A8D9EA8FD} = {A357F1E9-AECC-4DB7-B7EE-06B3E940072F}
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
 		{2336DA2C-97B2-4165-9BAD-2C612DBBBB19}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{2336DA2C-97B2-4165-9BAD-2C612DBBBB19}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{2336DA2C-97B2-4165-9BAD-2C612DBBBB19}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{2336DA2C-97B2-4165-9BAD-2C612DBBBB19}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0393F3C3-801D-402C-9E29-F67A8D9EA8FD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0393F3C3-801D-402C-9E29-F67A8D9EA8FD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0393F3C3-801D-402C-9E29-F67A8D9EA8FD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0393F3C3-801D-402C-9E29-F67A8D9EA8FD}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal
