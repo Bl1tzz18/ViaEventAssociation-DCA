@@ -1,0 +1,18 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+    <PropertyGroup>
+        <TargetFramework>net8.0</TargetFramework>
+        <RootNamespace>ViaEventAssociation_DCA.Core.Domain</RootNamespace>
+        <ImplicitUsings>enable</ImplicitUsings>
+        <Nullable>enable</Nullable>
+    </PropertyGroup>
+
+    <ItemGroup>
+      <Folder Include="Aggregates\Events\" />
+      <Folder Include="Aggregates\Guests\" />
+      <Folder Include="Aggregates\Locations\" />
+      <Folder Include="Common\Bases\" />
+      <Folder Include="Common\Values\" />
+    </ItemGroup>
+
+</Project>
