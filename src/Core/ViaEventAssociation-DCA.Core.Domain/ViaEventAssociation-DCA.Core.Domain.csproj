@@ -10,7 +10,7 @@
     <ItemGroup>
       <Folder Include="Aggregates\Guests\" />
       <Folder Include="Aggregates\Locations\" />
-      <Folder Include="Common\Bases\" />
+      <Folder Include="Aggregates\Creators\" />
       <Folder Include="Common\Values\" />
     </ItemGroup>
 
