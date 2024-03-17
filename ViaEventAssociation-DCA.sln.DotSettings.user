@@ -3,4 +3,9 @@
   &lt;TestAncestor&gt;&#xD;
     &lt;TestId&gt;xUnit::B5A4B989-F221-476E-88C4-685D35DDFA77::net8.0::UnitTests.Features.GuestTests.Register.GuestRegisterTests&lt;/TestId&gt;&#xD;
   &lt;/TestAncestor&gt;&#xD;
+&lt;/SessionState&gt;</s:String>
+	<s:String x:Key="/Default/Environment/UnitTesting/UnitTestSessionStore/Sessions/=eb9ca0cb_002D707c_002D44ca_002Dadfe_002Df94080b62404/@EntryIndexedValue">&lt;SessionState ContinuousTestingMode="0" IsActive="True" Name="GuestRegisterTests" xmlns="urn:schemas-jetbrains-com:jetbrains-ut-session"&gt;&#xD;
+  &lt;TestAncestor&gt;&#xD;
+    &lt;TestId&gt;xUnit::B5A4B989-F221-476E-88C4-685D35DDFA77::net8.0::UnitTests.Features.GuestTests.Register.GuestRegisterTests&lt;/TestId&gt;&#xD;
+  &lt;/TestAncestor&gt;&#xD;
 &lt;/SessionState&gt;</s:String></wpf:ResourceDictionary>
