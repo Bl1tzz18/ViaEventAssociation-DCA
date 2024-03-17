@@ -1,8 +1,4 @@
 using ViaEventAssociation_DCA.Core.Domain.Aggregates.Guests;
-using ViaEventAssociation_DCA.Core.Domain.Common.Values;
-using ViaEventAssociation.Core.Tools.OperationResult;
-using ViaEventAssociation.Core.Tools.OperationResult.Errors;
-
 
 namespace UnitTests.Features.GuestTests.Register;
 using Xunit;
