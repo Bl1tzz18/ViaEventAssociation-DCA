@@ -9,7 +9,6 @@
 
     <ItemGroup>
       <Folder Include="Aggregates\Locations\" />
-      <Folder Include="Aggregates\Creators\" />
     </ItemGroup>
 
     <ItemGroup>
