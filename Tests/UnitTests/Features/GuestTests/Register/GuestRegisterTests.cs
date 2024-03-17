@@ -16,7 +16,7 @@ public class GuestRegisterTests
     [InlineData("John", "Doe", "ALHE@via.dk")] 
     [InlineData("John", "Doe", "315198@via.dk")]
     [InlineData("J", "H", "315170@via.dk")] // One letter first name and last name
-    public void Create_UserWithValidEmailAndFirstNameAndLastName_ReturnsSuccess(string firstName, string lastName, string email)
+    public void Register_UserWithValidEmailAndFirstNameAndLastName_ReturnsSuccess(string firstName, string lastName, string email)
     {
         // Act
         var result = Guest.Create(firstName, lastName, email);
@@ -37,7 +37,7 @@ public class GuestRegisterTests
     [InlineData("John", "Doe", null)] // Null email
     [InlineData("John", "Doe", "")] // Empty email
     [InlineData("John", "Doe", "invalidemail@domain.com")] // Invalid email format
-    public void Create_InvalidUser_ReturnsFailure(string firstName, string lastName, string email)
+    public void Register_InvalidUser_ReturnsFailure(string firstName, string lastName, string email)
     {
         // Act
         var result = Guest.Create(firstName, lastName, email);
@@ -52,7 +52,7 @@ public class GuestRegisterTests
     [InlineData("John", null, "315170@via.dk")] // Null last name
     [InlineData("John", "", "315170@via.dk")] // Empty last name
     [InlineData("asdsadsadwefewfasfdsadsadsadsadsadsadsadsaddsadsadsa", "test", "315170@via.dk")] // Over 30 chars
-    public void Create_InvalidName_ReturnsFailure(string firstName, string lastName, string email)
+    public void Register_InvalidName_ReturnsFailure(string firstName, string lastName, string email)
     {
         // Act
         var result = Guest.Create(firstName, lastName, email);
