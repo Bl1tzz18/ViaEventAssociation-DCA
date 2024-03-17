@@ -8,9 +8,9 @@ namespace ViaEventAssociation_DCA.Core.Domain.Aggregates.Creators;
 public class Creator
 {
     private CreatorId CreatorId { get; }
-    private CreatorName CreatorName { get; }
+    public CreatorName CreatorName { get; }
 
-    private Email CreatorEmail { get; }
+    public Email CreatorEmail { get; }
 
     private Creator(CreatorId id, CreatorName name, Email email)
     {
