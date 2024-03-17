@@ -11,7 +11,10 @@
       <Folder Include="Aggregates\Guests\" />
       <Folder Include="Aggregates\Locations\" />
       <Folder Include="Aggregates\Creators\" />
-      <Folder Include="Common\Values\" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <ProjectReference Include="..\..\..\ViaEventAssociation.Core.Tools.OperationResult\ViaEventAssociation.Core.Tools.OperationResult.csproj" />
     </ItemGroup>
 
 </Project>

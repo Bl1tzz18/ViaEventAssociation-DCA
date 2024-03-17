@@ -5,16 +5,9 @@ namespace ViaEventAssociation.Core.Tools.OperationResult.Errors;
 /// </summary>
 public class ExceptionModel
 {
-    /// <summary>
-    /// Error code (see <see cref="StatusCodes"/>)
-    /// </summary>
-    public int ErrorCode { get; set; }
-    /// <summary>
-    /// Error message
-    /// </summary>
+    public ReasonEnum ErrorCode { get; set; }
     public string ErrorMessage { get; init; }
-    
-    protected ExceptionModel(int errorCode, string errorMessage)
+    public ExceptionModel(ReasonEnum errorCode, string errorMessage)
     {
         ErrorCode = errorCode;
         ErrorMessage = errorMessage;
