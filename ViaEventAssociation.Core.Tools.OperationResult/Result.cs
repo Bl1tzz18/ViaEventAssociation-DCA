@@ -7,8 +7,10 @@ namespace ViaEventAssociation.Core.Tools.OperationResult
     public abstract class Result
     {
         public List<ExceptionModel> OperationErrors { get; protected set; } = new();
-        public bool IsSuccess => OperationErrors.Count == 0;
+        public ExceptionModel SingleOperationError { get; protected set; }
+        public bool IsSuccess => OperationErrors.Count == 0 && SingleOperationError == null;
         public bool IsFailure => !IsSuccess;
+
         public static Result Success() => new ResultNoPayload();
         public static Result Failure(List<ExceptionModel> errors) => new ResultNoPayload(errors);
     }
