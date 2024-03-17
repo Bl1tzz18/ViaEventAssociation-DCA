@@ -1,31 +1,24 @@
+using ViaEventAssociation_DCA.Core.Domain.Common.Bases;
+using ViaEventAssociation.Core.Tools.OperationResult;
+using ViaEventAssociation.Core.Tools.OperationResult.Errors;
+
 namespace ViaEventAssociation_DCA.Core.Domain.Aggregates.Events.Values;
 
-public class EventId
+public class EventId : IdentityBase
 {
-    public Guid Value { get; }
-
-    public EventId(Guid value)
+    protected EventId(string prefix) : base(prefix)
     {
-        if (value == Guid.Empty)
+    }
+    
+    public static Result<EventId> GenerateId()
+    {
+        try
         {
-            throw new ArgumentException("EventId cannot be empty", nameof(value));
+            return new EventId("EID");
         }
-
-        Value = value;
-    }
-
-    public static implicit operator Guid(EventId eventId)
-    {
-        return eventId.Value;
-    }
-
-    public static implicit operator EventId(Guid eventId)
-    {
-        return new(eventId);
-    }
-
-    public override string ToString()
-    {
-        return Value.ToString();
+        catch (Exception exception)
+        {
+            return Result<EventId>.Failure(new List<ExceptionModel> { new ExceptionModel(ReasonEnum.BadRequest, exception.Message) });
+        }
     }
 }
