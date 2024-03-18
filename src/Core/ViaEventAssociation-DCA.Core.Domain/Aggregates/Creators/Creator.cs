@@ -1,4 +1,4 @@
-using System.Runtime.InteropServices.JavaScript;
+using ViaEventAssociation_DCA.Core.Domain.Aggregates.Events;
 using ViaEventAssociation_DCA.Core.Domain.Common.Values;
 using ViaEventAssociation.Core.Tools.OperationResult;
 using ViaEventAssociation.Core.Tools.OperationResult.Errors;
@@ -39,5 +39,10 @@ public class Creator
             return Result<Creator>.Failure(errors);
 
         return new Creator(creatorIdResult.Payload, nameResult.Payload, emailResult.Payload);
+    }
+    
+    public Result<ViaEvent> CreateEvent() {
+        var eventResult = ViaEvent.Create(this);
+        return eventResult.IsSuccess ? eventResult.Payload : eventResult.SingleOperationError;
     }
 }
