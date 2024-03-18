@@ -12,17 +12,17 @@ namespace ViaEventAssociation_DCA.Core.Domain.Aggregates.Events;
 
 public class ViaEvent : AggregateRoot<EventId>
 {
-    private const int MIN_NUMBER_OF_GUESTS = 1;
+    private const int MIN_NUMBER_OF_GUESTS = 5;
     private const int MAX_NUMBER_OF_GUESTS = 50;
 
     private const string DEFAULT_TITLE_EVENT = "I want to die";
     public Creator Creator { get; private set; }
-    internal EventTitle Title { get; set; }
-    internal EventDateTime TimeSpan { get; set; }
-    internal EventDescription Description { get; set; }
-    internal EventVisibility Visibility { get; set; }
-    internal EventStatus Status { get; set; }
-    internal NumberOfGuests NumberOfGuests { get; set; }
+    public EventTitle Title { get; set; }
+    public EventDateTime TimeSpan { get; set; }
+    public EventDescription Description { get; set; }
+    public EventVisibility Visibility { get; set; }
+    public EventStatus Status { get; set; }
+    public NumberOfGuests NumberOfGuests { get; set; }
     public HashSet<Participation> Participations { get; private set; }
     public Location Location { get; private set; }
     private int ParticipationsConfirmed => Participations.Count(p => p.ParticipationStatus is ParticipationStatus.Accepted);
@@ -60,24 +60,38 @@ public class ViaEvent : AggregateRoot<EventId>
             return Result.Failure(new List<ExceptionModel> { new ExceptionModel(ReasonEnum.BadRequest, "Event is cancelled.") });
 
         Visibility = EventVisibility.Private;
-        Status = EventStatus.Draft;
         return Result.Success();
     }
+
     
     public Result UpdateEventTitle(string title) {
         var errors = new List<ExceptionModel>();
-        var newTitle = EventTitle.Create(title).OnFailure(error => errors.Add(error));
+
+        // Attempt to create a new EventTitle object with the provided title
+        var newTitleResult = EventTitle.Create(title);
+        if (newTitleResult.IsFailure)
+        {
+            // If creation fails, add the errors to the list and return a failure result
+            errors.AddRange(newTitleResult.OperationErrors);
+            return Result.Failure(errors);
+        }
+
+        // Check if the event status is active or cancelled
         if (Status is EventStatus.Active) 
             errors.Add(new ExceptionModel(ReasonEnum.BadRequest, "Event is already active."));
         if (Status is EventStatus.Cancelled)
             errors.Add(new ExceptionModel(ReasonEnum.BadRequest, "Event is cancelled."));
+    
         if (errors.Any())
             return Result.Failure(errors);
-        
-        Title = newTitle.Payload;
+    
+        // Update the Title property only if the creation of the new title was successful
+        Title = newTitleResult.Payload;
         Status = EventStatus.Draft;
+    
         return Result.Success();
     }
+
     
     public Result UpdateEventTimeSpan(DateTime start, DateTime end) {
         var errors = new List<ExceptionModel>();

@@ -8,5 +8,13 @@
 	<s:String x:Key="/Default/Environment/UnitTesting/UnitTestSessionStore/Sessions/=eb9ca0cb_002D707c_002D44ca_002Dadfe_002Df94080b62404/@EntryIndexedValue">&lt;SessionState ContinuousTestingMode="0" IsActive="True" Name="GuestRegisterTests" xmlns="urn:schemas-jetbrains-com:jetbrains-ut-session"&gt;&#xD;
   &lt;TestAncestor&gt;&#xD;
     &lt;TestId&gt;xUnit::B5A4B989-F221-476E-88C4-685D35DDFA77::net8.0::UnitTests.Features.GuestTests.Register.GuestRegisterTests&lt;/TestId&gt;&#xD;
+    &lt;TestId&gt;xUnit::B5A4B989-F221-476E-88C4-685D35DDFA77::net8.0::UnitTests.Features.Event.CreateEvent.CreateEventTests&lt;/TestId&gt;&#xD;
+    &lt;TestId&gt;xUnit::B5A4B989-F221-476E-88C4-685D35DDFA77::net8.0::UnitTests.Features.Event.UpdateTitle.UpdateTitleTests&lt;/TestId&gt;&#xD;
+    &lt;TestId&gt;xUnit::B5A4B989-F221-476E-88C4-685D35DDFA77::net8.0::UnitTests.Features.Event.UpdateDescription.UpdateDescriptionTests&lt;/TestId&gt;&#xD;
+    &lt;TestId&gt;xUnit::B5A4B989-F221-476E-88C4-685D35DDFA77::net8.0::UnitTests.Features.Event.UpdateTimeRange.UpdateTimeRangeTests&lt;/TestId&gt;&#xD;
+    &lt;TestId&gt;xUnit::B5A4B989-F221-476E-88C4-685D35DDFA77::net8.0::UnitTests.Features.Event.MakePublic.MakePublicTests&lt;/TestId&gt;&#xD;
+    &lt;TestId&gt;xUnit::B5A4B989-F221-476E-88C4-685D35DDFA77::net8.0::UnitTests.Features.Event.MakePrivate.MakePrivateTests&lt;/TestId&gt;&#xD;
+    &lt;TestId&gt;xUnit::B5A4B989-F221-476E-88C4-685D35DDFA77::net8.0::UnitTests.Features.Event.SetMaxGuests.SetMaxGuests&lt;/TestId&gt;&#xD;
+    &lt;TestId&gt;xUnit::B5A4B989-F221-476E-88C4-685D35DDFA77::net8.0::UnitTests.Features.Event.Ready.ReadyTests&lt;/TestId&gt;&#xD;
   &lt;/TestAncestor&gt;&#xD;
 &lt;/SessionState&gt;</s:String></wpf:ResourceDictionary>

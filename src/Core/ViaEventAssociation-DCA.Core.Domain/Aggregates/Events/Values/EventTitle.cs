@@ -5,8 +5,8 @@ using ViaEventAssociation.Core.Tools.OperationResult.Errors;
 namespace ViaEventAssociation_DCA.Core.Domain.Aggregates.Events.Values;
 
 public class EventTitle : ValueObject {
-    private const int MIN_TITLE_LENGTH = 1;
-    private const int MAX_TITLE_LENGTH = 100;
+    private const int MIN_TITLE_LENGTH = 3;
+    private const int MAX_TITLE_LENGTH = 75;
 
     private EventTitle(string title) {
         Value = title;

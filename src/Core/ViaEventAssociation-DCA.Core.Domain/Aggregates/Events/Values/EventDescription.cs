@@ -6,8 +6,8 @@ namespace ViaEventAssociation_DCA.Core.Domain.Aggregates.Events.Values;
 
 public class EventDescription : ValueObject
 {
-    private static readonly int MIN_TITLE_LENGTH = 3;
-    private static readonly int MAX_TITLE_LENGTH = 50;
+    private static readonly int MIN_DESCRIPTION_LENGTH = 0;
+    private static readonly int MAX_DESCRIPTION_LENGTH = 250;
     public string Value { get; }
 
     public EventDescription(string value)
@@ -36,10 +36,10 @@ public class EventDescription : ValueObject
     {
         var errors = new List<ExceptionModel>();
 
-        if (description.Length < MIN_TITLE_LENGTH)
+        if (description.Length < MIN_DESCRIPTION_LENGTH)
             errors.Add(new ExceptionModel(ReasonEnum.BadRequest, "Description is too short."));
 
-        if (description.Length > MAX_TITLE_LENGTH)
+        if (description.Length > MAX_DESCRIPTION_LENGTH)
             errors.Add(new ExceptionModel(ReasonEnum.BadRequest, "Description is too long."));
 
         if (errors.Any())

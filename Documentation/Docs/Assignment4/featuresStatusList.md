@@ -39,7 +39,7 @@ Note: each requirement will have a checkbox that can be marked as done ([x]) whe
 
   
 
-- [ ] **User Story**: In order to host events, as a creator, I want to create a new event.
+- [X] **User Story**: In order to host events, as a creator, I want to create a new event.
 
   
 
@@ -47,7 +47,7 @@ Note: each requirement will have a checkbox that can be marked as done ([x]) whe
 
   
 
-- [ ] S1: Given an ID, when creator selects to create an event, then an empty event is created with an ID, the
+- [x] S1: Given an ID, when creator selects to create an event, then an empty event is created with an ID, the
 
   
 
@@ -55,7 +55,7 @@ status is set to "draft", and the maximum number of guests is 5.
 
   
 
-- [ ] S2: Given an ID, when creator selects to create an event, then the event is created, and the title of the
+- [x] S2: Given an ID, when creator selects to create an event, then the event is created, and the title of the
 
   
 
@@ -63,7 +63,7 @@ event is set to "Working Title".
 
   
 
-- [ ] S3: Given an ID, when creator selects to create an event, then the event is created, and the description
+- [x] S3: Given an ID, when creator selects to create an event, then the event is created, and the description
 
   
 
@@ -71,7 +71,7 @@ of the event is set to an empty text, i.e. "".
 
   
 
-- [ ] S4: Given an ID, when creator selects to create an event, then the event is created, and the visibility of
+- [x] S4: Given an ID, when creator selects to create an event, then the event is created, and the visibility of
 
   
 
@@ -83,7 +83,7 @@ the event is private.
 
   
 
-- [ ] (No failure scenarios specified for this use case.)
+- [x] (No failure scenarios specified for this use case.)
 
   
 
@@ -91,7 +91,7 @@ the event is private.
 
   
 
-- [ ] **User Story**: In order to catch the interest of guests, as a creator, I want to set the title of an event.
+- [x] **User Story**: In order to catch the interest of guests, as a creator, I want to set the title of an event.
 
   
 
@@ -99,7 +99,7 @@ the event is private.
 
   
 
-- [ ] S1: Given an existing event with ID, when creator selects to set the title of the event, then the title of
+- [x] S1: Given an existing event with ID, when creator selects to set the title of the event, then the title of
 
   
 
@@ -115,7 +115,7 @@ status.
 
   
 
-- [ ] F1: Given an existing event with ID, when creator selects to set the title of the event, then a failure
+- [x] F1: Given an existing event with ID, when creator selects to set the title of the event, then a failure
 
   
 
@@ -123,7 +123,7 @@ message is returned explaining the rules if the title is not between 3 and 75 ch
 
   
 
-- [ ] F2: Given an existing event with ID, when creator selects to set the title of the event and the event is
+- [x] F2: Given an existing event with ID, when creator selects to set the title of the event and the event is
 
   
 
@@ -135,7 +135,7 @@ in active or cancelled status, then a failure message is returned explaining tha
 
   
 
-- [ ] **User Story**: In order to inform guests about the content of an event, as a creator, I want to set the
+- [x] **User Story**: In order to inform guests about the content of an event, as a creator, I want to set the
 
   
 
@@ -147,7 +147,7 @@ description of an event.
 
   
 
-- [ ] S1: Given an existing event with ID and the status is draft, when creator selects to set the description
+- [x] S1: Given an existing event with ID and the status is draft, when creator selects to set the description
 
   
 
@@ -159,7 +159,7 @@ characters.
 
   
 
-- [ ] S2: Given an existing event with ID, when creator selects to set the description of the event to
+- [x] S2: Given an existing event with ID, when creator selects to set the description of the event to
 
   
 
@@ -167,7 +167,7 @@ nothing/empty, then the description of the event is set to an empty description 
 
   
 
-- [ ] S3: Given an existing event with ID and the status is ready, when creator selects to set the description
+- [x] S3: Given an existing event with ID and the status is ready, when creator selects to set the description
 
   
 
@@ -183,7 +183,7 @@ draft.
 
   
 
-- [ ] F1: Given an existing event with ID, when creator selects to set the description of the event and the
+- [x] F1: Given an existing event with ID, when creator selects to set the description of the event and the
 
   
 
@@ -191,7 +191,7 @@ description is more than 250 characters, then a failure message is returned expl
 
   
 
-- [ ] F2: Given an existing event with ID, when creator selects to set the description of the event and the
+- [x] F2: Given an existing event with ID, when creator selects to set the description of the event and the
 
   
 
@@ -199,7 +199,7 @@ event is in cancelled status, then a failure message is returned.
 
   
 
-- [ ] F3: Given an existing event with ID, when creator selects to set the description of the event and the
+- [x] F3: Given an existing event with ID, when creator selects to set the description of the event and the
 
   
 
@@ -211,7 +211,7 @@ event is in active status, then a failure message is returned.
 
   
 
-- [ ] **User Story**: In order to inform guests when to show up and when to leave, as a creator, I want to set the start
+- [x] **User Story**: In order to inform guests when to show up and when to leave, as a creator, I want to set the start
 
   
 
@@ -223,7 +223,7 @@ time/date and end time/date of the event.
 
   
 
-- [ ] S1: Given an existing event with ID and the event status is draft, when creator selects to set the times
+- [x] S1: Given an existing event with ID and the event status is draft, when creator selects to set the times
 
   
 
@@ -255,7 +255,7 @@ start time is in the future, then the times of the event are updated.
 
   
 
-- [ ] S5: Given an existing event with ID, when creator sets the times of the event to valid values and the
+- [x] S5: Given an existing event with ID, when creator sets the times of the event to valid values and the
 
   
 
@@ -267,7 +267,7 @@ duration from start to finish is 10 hours or less, then the times of the event a
 
   
 
-- [ ] F1: Given an existing event with ID, when creator selects to set the times of the event and the start date
+- [x] F1: Given an existing event with ID, when creator selects to set the times of the event and the start date
 
   
 
@@ -275,7 +275,7 @@ is after the end date, then a failure message is returned.
 
   
 
-- [ ] F2: Given an existing event with ID, when creator selects to set the times of the event and the start time
+- [x] F2: Given an existing event with ID, when creator selects to set the times of the event and the start time
 
   
 
@@ -283,7 +283,7 @@ is after the end time, then a failure message is returned.
 
   
 
-- [ ] F3: Given an existing event with ID, when creator selects to set the times of the event and the duration
+- [x] F3: Given an existing event with ID, when creator selects to set the times of the event and the duration
 
   
 
@@ -291,7 +291,7 @@ is less than 1 hour, then a failure message is returned.
 
   
 
-- [ ] F4: Given an existing event with ID, when creator selects to set the times of the event and the time
+- [x] F4: Given an existing event with ID, when creator selects to set the times of the event and the time
 
   
 
@@ -299,7 +299,7 @@ interval is invalid, then a failure message is returned.
 
   
 
-- [ ] F5: Given an existing event with ID, when creator selects to set the times of the event and the start time
+- [x] F5: Given an existing event with ID, when creator selects to set the times of the event and the start time
 
   
 
@@ -307,7 +307,7 @@ is before 08:00, then a failure message is returned.
 
   
 
-- [ ] F6: Given an existing event with ID, when creator selects to set the times of the event and the start time
+- [x] F6: Given an existing event with ID, when creator selects to set the times of the event and the start time
 
   
 
@@ -347,7 +347,7 @@ the past, then a failure message is returned.
 
   
 
-- [ ] F11: Given an existing event with ID, when creator selects to set the times of the event and the time
+- [x] F11: Given an existing event with ID, when creator selects to set the times of the event and the time
 
   
 
@@ -359,7 +359,7 @@ spans the restricted hours, then a failure message is returned.
 
   
 
-- [ ] **User Story**: In order to let any guest join the event, as a creator, I want to make the event public.
+- [x] **User Story**: In order to let any guest join the event, as a creator, I want to make the event public.
 
   
 
@@ -367,7 +367,7 @@ spans the restricted hours, then a failure message is returned.
 
   
 
-- [ ] S1: Given an existing event with ID and the status is draft, ready, or active, when creator chooses to
+- [x] S1: Given an existing event with ID and the status is draft, ready, or active, when creator chooses to
 
   
 
@@ -379,7 +379,7 @@ make the event public, then the event is made public and the status is unchanged
 
   
 
-- [ ] F1: Given an existing event with ID and the event is in cancelled status, when creator chooses to make the
+- [x] F1: Given an existing event with ID and the event is in cancelled status, when creator chooses to make the
 
   
 
@@ -391,7 +391,7 @@ event public, then a failure message is provided.
 
   
 
-- [ ] **User Story**: In order to only let invited guests join an event, as a creator, I want to make the event private.
+- [x] **User Story**: In order to only let invited guests join an event, as a creator, I want to make the event private.
 
   
 
@@ -399,7 +399,7 @@ event public, then a failure message is provided.
 
   
 
-- [ ] S1: Given an existing event with ID and the status is draft or ready, when creator chooses to make the
+- [x] S1: Given an existing event with ID and the status is draft or ready, when creator chooses to make the
 
   
 
@@ -407,7 +407,7 @@ event private, then the event is made private and the status is updated to draft
 
   
 
-- [ ] S2: Given an existing event with ID and the status is draft or ready and the event is already public, when
+- [x] S2: Given an existing event with ID and the status is draft or ready and the event is already public, when
 
   
 
@@ -419,7 +419,7 @@ creator chooses to make the event private, then the event is made private.
 
   
 
-- [ ] F1: Given an existing event with ID and the event is in active status, when creator chooses to make the
+- [x] F1: Given an existing event with ID and the event is in active status, when creator chooses to make the
 
   
 
@@ -427,7 +427,7 @@ event private, then a failure message is provided.
 
   
 
-- [ ] F2: Given an existing event with ID and the event is in cancelled status, when creator chooses to make the
+- [x] F2: Given an existing event with ID and the event is in cancelled status, when creator chooses to make the
 
   
 
@@ -439,7 +439,7 @@ event private, then a failure message is provided.
 
   
 
-- [ ] **User Story**: In order to not violate fire regulations, as a creator, I want to set the maximum number of
+- [x] **User Story**: In order to not violate fire regulations, as a creator, I want to set the maximum number of
 
   
 
@@ -451,7 +451,7 @@ guests.
 
   
 
-- [ ] S1: Given an existing event with ID and the event status is draft or ready, when creator sets the maximum
+- [x] S1: Given an existing event with ID and the event status is draft or ready, when creator sets the maximum
 
   
 
@@ -459,7 +459,7 @@ number of guests, then the maximum number of guests is set to the selected value
 
   
 
-- [ ] S2: Given an existing event with ID and the event status is draft or ready, when creator sets the maximum
+- [x] S2: Given an existing event with ID and the event status is draft or ready, when creator sets the maximum
 
   
 
@@ -471,7 +471,7 @@ or equal to 5.
 
   
 
-- [ ] S3: Given an existing event with ID and the event is in active status, when creator sets the maximum
+- [x] S3: Given an existing event with ID and the event is in active status, when creator sets the maximum
 
   
 
@@ -487,7 +487,7 @@ number of guests is set to the selected value.
 
   
 
-- [ ] F1: Given an existing event with ID and the event is in active status, when creator reduces the number of
+- [x] F1: Given an existing event with ID and the event is in active status, when creator reduces the number of
 
   
 
@@ -511,7 +511,7 @@ guests and the number is larger than the location’s capacity, then the request
 
   
 
-- [ ] F4: Given an existing event with ID, when creator sets the number of maximum guests to a number less than
+- [x] F4: Given an existing event with ID, when creator sets the number of maximum guests to a number less than
 
   
 
@@ -519,7 +519,7 @@ guests and the number is larger than the location’s capacity, then the request
 
   
 
-- [ ] F5: Given an existing event with ID, when creator sets the number of maximum guests to a number greater
+- [x] F5: Given an existing event with ID, when creator sets the number of maximum guests to a number greater
 
   
 
