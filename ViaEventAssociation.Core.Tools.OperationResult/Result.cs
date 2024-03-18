@@ -23,10 +23,10 @@ namespace ViaEventAssociation.Core.Tools.OperationResult
 
     public class Result<T> : Result
     {
-        public Result(List<ExceptionModel> errors) : base() => OperationErrors = errors;
-        public Result(T payload) => Payload = payload;
         public T Payload { get; private set; } = default!;
         
+        public Result(List<ExceptionModel> errors) : base() => OperationErrors = errors;
+        public Result(T payload) => Payload = payload;
         
         
         public static Result<T> Success(T payload) => new Result<T>(payload);
@@ -38,6 +38,23 @@ namespace ViaEventAssociation.Core.Tools.OperationResult
             Failure(new List<ExceptionModel> { error });
 
         public static implicit operator Result<T>(List<ExceptionModel> errors) => Failure(errors);
+
+        public Result<T> OnSuccess(Action<T> action)
+        {
+            if (IsSuccess)
+            {
+                action?.Invoke(Payload);
+            }
+            
+            return this;
+        }
+        public Result<T> OnFailure(Action<ExceptionModel> action) {
+            if (IsFailure) {
+                action?.Invoke(this.OperationErrors.First());
+            }
+
+            return this;
+        }
 
         public static Result<T> Combine(params Result<T>[] results)
         {
